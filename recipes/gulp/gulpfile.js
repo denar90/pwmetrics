@@ -28,7 +28,6 @@ gulp.task('pwmetrics', function() {
       expectations: true
     },
     expectations: {
-      metrics: {
         ttfcp: {
           warn: '>=3000',
           error: '>=5000'
@@ -41,7 +40,6 @@ gulp.task('pwmetrics', function() {
           warn: '>=1500',
           error: '>=3200'
         }
-      }
     }
   });
   return pwMetrics.start()
