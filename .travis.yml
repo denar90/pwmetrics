@@ -18,5 +18,5 @@ before_script:
   - sh -e /etc/init.d/xvfb start
   - ./node_modules/lighthouse/lighthouse-core/scripts/download-chrome.sh
 script:
-  - yarn run test && yarn run gulp-example
+  - node_modules/.bin/lighthouse http://example.com --disable-cpu-throttling=false
 email: false
