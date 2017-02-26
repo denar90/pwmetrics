@@ -7,7 +7,7 @@ const sysPath = require('path');
 const fs = require('fs');
 const yargs = require('yargs');
 
-const PWMetrics = require('../lib/index');
+const PWMetrics = require('../chrome-lighthouse-tests');
 const { getConfigFromFile } = require('../lib/utils/fs');
 const { getMessageWithPrefix, getMessage } = require('../lib/utils/messages');
 
