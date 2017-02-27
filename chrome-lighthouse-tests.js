@@ -42,14 +42,7 @@ class PWMetrics {
   run() {
     return this.launchChrome()
       .then(() => {
-        return lighthouse(this.url, this.flags, perfConfig).then(_ => {
-          return new Promise(resolve => {
-            console.log('waiting...');
-            setTimeout(_ => {
-              return resolve();
-            }, 1000);
-          });
-        });
+        return lighthouse(this.url, this.flags, perfConfig);
       })
       .then(data => {
         console.log('closing chrome');
