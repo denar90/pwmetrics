@@ -23,4 +23,4 @@ before_script:
   - sh -e /etc/init.d/xvfb start
   - ./node_modules/lighthouse/lighthouse-core/scripts/download-chrome.sh
 script:
-  - if [[ $RUN_RECIPES = "1" ]]; then yarn run gulp-example; else yarn run test; fi
+  - ./run-test.sh
