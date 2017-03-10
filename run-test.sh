@@ -2,7 +2,7 @@ if [[ $RUN_RECIPES = "1" ]];
   then yarn run gulp-example;
 else
   npm run build &&
-  if [[ $(node -v) =~ ^v4.* ]]; then
+  if [[ $(node -v) =~ ^v6.* ]]; then
     node --harmony test
   else
     test
