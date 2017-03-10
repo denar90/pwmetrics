@@ -3,11 +3,9 @@ if [[ $RUN_RECIPES = "1" ]];
 else
   npm run build &&
   if [[ $(node -v) =~ ^v6.* ]]; then
-    node --harmony test
+    ./node_modules/.bin/mocha --harmony-async-await --require ./test/setup/common.js
   else
-    test
+    ./node_modules/.bin/mocha --require ./test/setup/common.js
   fi
 fi
 
-test
-	node_modules/.bin/mocha --require test/setup/common.js
